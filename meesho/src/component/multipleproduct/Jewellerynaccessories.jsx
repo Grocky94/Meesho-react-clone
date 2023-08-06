@@ -1,25 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Multiple.css"
+import { useNavigate } from 'react-router-dom';
+
 const Jewellerynaccessories = () => {
+    const [Products, setProducts] = useState([]);
+    const [checkProduct, setCheckProduct] = useState(true); // Added checkProduct state
+
+    const router = useNavigate();
+
+    const sendData = (product) => {
+        router(`/singleproduct/${product?.id}`);
+    };
+
+
+    useEffect(() => {
+        const items = JSON.parse(localStorage.getItem('product')) || [];
+        // Filter products for the Beauty category
+        const beautyProducts = items.filter(product => product.Productcategory === 'Jewellerynaccessories');
+        setProducts(beautyProducts);
+    }, []);
+
+    // Set checkProduct based on Products length
+    useEffect(() => {
+        setCheckProduct(Products.length > 0);
+    }, [Products]);
+
     return (
         <div>
             <div id="multi-product-header">
                 <p>Jewellery & accessories</p>
             </div>
-            <div id="multi-product-screen">
+             {checkProduct && ( <div id="multi-product-screen">
                 <div id="inside-multi-product-screen">
                     {/* <!-- product one  --> */}
-                    <div className="multi-product-div">
+                     {Products.map((Prop) => (<div className="multi-product-div" key={Prop.id}>
                         <div className="multi-product-image">
-                            <img src="https://images.meesho.com/images/products/156800169/npbqn_400.webp" />
+                            <img src={Prop.Productimage} />
                         </div>
-                        <p>Fancy Partywear Men Ts..</p>
-                        <p><b>₹ 290</b> onwards</p>
+                        <p>{Prop.Productname}</p>
+                        <p><b>₹ {Prop.Productprice}</b> onwards</p>
                         <div className="delivery-div-inside-multi-product">Free Delivery </div>
-                        <button id="continue-to-cart">Add to Cart</button>
-                    </div>
+                        <button id="continue-to-cart" onClick={() => sendData(Prop)}>Add to Cart</button>
+                    </div>))}
                 </div>
-            </div>
+            </div>)}
         </div>
     )
 }

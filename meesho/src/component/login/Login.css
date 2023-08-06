@@ -46,13 +46,13 @@
     text-align: center;
 }
 
-#login-form-div>input {
+#login-form-div>form>input {
     height: 5vh;
     width: 100%;
     outline: none;
 }
 
-#login-form-div>input[type=submit] {
+#login-form-div>form>input[type=submit] {
     margin-top: 5%;
     background-color: #9f2089;
     color: white;
@@ -69,7 +69,7 @@
     margin-left: 2%;
 }
 
-#div-for-login>p:nth-child(4)>span>a {
+#div-for-login>p:nth-child(4)>span {
     color: #9f2089;
 
 }

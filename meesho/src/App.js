@@ -14,6 +14,8 @@ import Homenkitchen from "./component/multipleproduct/Homenkitchen";
 import Beautynhealth from "./component/multipleproduct/Beautynhealth";
 import Jewellerynaccessories from "./component/multipleproduct/Jewellerynaccessories";
 import Electronics from "./component/multipleproduct/Electronics";
+import Addproduct from "./component/addproduct/Addproduct";
+import Bagsnfootwear from "./component/multipleproduct/Bagsnfootwear";
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route exact path="/singleproduct" element={<Singleproduct />} />
+        <Route exact path="/singleproduct/:id" element={<Singleproduct />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/womenethenic" element={<WomenEthinic />} />
         <Route exact path="/womenwestern" element={<WomenWestern />} />
@@ -33,6 +35,8 @@ function App() {
         <Route exact path="/beautynhealth" element={<Beautynhealth />} />
         <Route exact path="/jewellerynaccessories" element={<Jewellerynaccessories />} />
         <Route exact path="/electronics" element={<Electronics />} />
+        <Route exact path="/addproduct" element={<Addproduct />} />
+        <Route exact path="/bagsnfootwear" element={<Bagsnfootwear />} />
       </Routes>
       <Footer />
     </div>

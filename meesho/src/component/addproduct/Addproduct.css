@@ -1,4 +1,4 @@
-#register-screen {
+#add-product-screen {
     /* height: 100%; */
     width: 100%;
     /* border: 1px solid black; */
@@ -8,7 +8,7 @@
     padding-bottom: 2%;
 }
 
-#div-for-signup {
+#div-for-add-product {
     height: 90%;
     width: 30%;
     margin: auto;
@@ -18,19 +18,19 @@
     background-color: white;
 }
 
-#signup-img-div {
+#add-product-img-div {
     height: 35%;
     width: 100%;
     /* border: 1px solid black; */
 
 }
 
-#signup-img-div>img {
+#add-product-img-div>img {
     height: 100%;
     width: 100%;
 }
 
-#signup-form-div {
+#add-product-form-div {
     /* height:55%; */
     width: 90%;
     /* border: 1px solid black; */
@@ -40,33 +40,41 @@
 
 }
 
-#div-for-signup>p:nth-child(2) {
+#div-for-add-product>p:nth-child(2) {
     margin-top: 2%;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
 }
 
-#signup-form-div>form>input {
+#add-product-form-div>form>input {
     height: 5vh;
     width: 100%;
     outline: none;
 }
 
-#register-select-div {
+#selector-div {
     height: 5vh;
     width: 100%;
     border: 1px solid #000;
-    margin: 2% 0;
     display: flex;
+    margin: 2% 0;
 }
 
-#register-select-div>select{
+#selector-div>select {
     height: 100%;
     width: 100%;
+    outline: none;
+    border: none;
+    color: black;
 }
 
-#signup-form-div>form>input[type=submit] {
+#selector-div>select>option {
+    color: black;
+    background-color: white;
+}
+
+#add-product-form-div>form>input[type=submit] {
     margin-top: 5%;
     background-color: #9f2089;
     color: white;
@@ -74,26 +82,26 @@
     border: none;
 }
 
-#div-for-signup>p:nth-child(4) {
+#div-for-add-product>p:nth-child(4) {
     font-size: 0.9em;
     text-align: center;
     margin-top: 1%;
 }
 
-#div-for-signup>p:nth-child(4)>span {
+#div-for-add-product>p:nth-child(4)>span {
     margin-left: 2%;
 }
 
-#div-for-signup>p:nth-child(4)>span {
+#div-for-add-product>p:nth-child(4)>span {
     color: #9f2089;
 }
 
-#div-for-signup>p:nth-child(5) {
+#div-for-add-product>p:nth-child(5) {
     font-size: 0.8em;
     text-align: center;
     margin-top: 10%;
 }
 
-.signup-color-me {
+.add-product-color-me {
     color: #9f2089;
 }
