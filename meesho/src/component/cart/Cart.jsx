@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Cart = () => {
 
   const [userCart, setUserCart] = useState([])
-  console.log(userCart)
+  // console.log(userCart)
   const [finalPrice, setFinalPrice] = useState(0);
   const [showThankYou, setShowThankYou] = useState(false)
   const alluser = JSON.parse(localStorage.getItem("user"));

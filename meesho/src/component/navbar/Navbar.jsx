@@ -38,7 +38,7 @@ const Navbar = () => {
                 <span>Cart</span>
               </span>
               {state?.user ?<span onClick={() => { LOGOUT(); router('/'); }}>
-                <p></p>
+                <p> </p>
                 <span>Logout</span>
               </span>: ""}
             </div>
